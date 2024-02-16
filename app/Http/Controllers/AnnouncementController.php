@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller {   
 
-    public function createAnnouncement(){
-        return view("announcement.create");
+    public function createAnnouncement()
+    {
+        return view("announcements.create");
     }
 
     public function submitAnnouncement(Request $request){

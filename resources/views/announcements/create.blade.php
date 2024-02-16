@@ -1,5 +1,18 @@
 <x-layout>
-    <div class="container">
+ <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <livewire:create-announcement/>
+    </div>
+  </div>
+ </div>
+
+</x-layout>
+
+
+
+
+   {{-- <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center">Inserisci Annuncio</h1>
@@ -34,6 +47,4 @@
                   </form>
             </div>
         </div>
-    </div>
-
-</x-layout>
+    </div> --}}

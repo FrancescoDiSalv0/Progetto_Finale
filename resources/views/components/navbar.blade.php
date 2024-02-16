@@ -22,7 +22,7 @@
         @else
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route("announcement.create")}}"> Inserisci Annuncio </a>
+            <a class="nav-link" href="{{route("announcements.create")}}"> Inserisci Annuncio </a>
           </li>
 
           <li class="nav-item">
