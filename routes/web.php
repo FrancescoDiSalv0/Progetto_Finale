@@ -18,3 +18,7 @@ use App\Http\Controllers\AnnouncementController;
 Route::get('/', [PublicController::class, "welcome"])->name("welcome");
 // Rotta per pagina inserimento annuncio
 Route::get('/nuovo/annuncio', [AnnouncementController::class, "createAnnouncement"])->name("announcement.create");
+// Rotta di tipo Post per recuperare dati nuovo annuncio
+Route::post('/nuovo/annuncio/submit', [AnnouncementController::class, "submitAnnouncement"])->name("announcement.submit");
+
+
