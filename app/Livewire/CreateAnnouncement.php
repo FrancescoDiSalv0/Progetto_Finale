@@ -5,15 +5,25 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Announcement;
+use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncement extends Component
 {
-    public $title;
-    public $description;
-    public $price;
-    public $category;
+    // public $title;
+    // public $description;
+    // public $price;
+    // public $category;
     
+    #[Validate]
+    public $title = "";
+    #[Validate]
+    public $description = "";
+    #[Validate]
+    public $price ="";
+    #[Validate]
+    public $category ="";
+
     protected $rules = [
         'title' =>'required|min:4',
         'description' =>'required|min:8',

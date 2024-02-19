@@ -12,16 +12,27 @@ class AnnouncementController extends Controller {
         return view("announcements.create");
     }
 
-    public function submitAnnouncement(Request $request){
-        // dd($request);
-        $announcement= Announcement::create([
-            "title" => $request->input("title"),
-            "description" => $request->input("description"),
-            "price" => $request->input("price"),
-        ]);
+    public function showAnnouncement(Announcement $announcement)
+    {
+        return view("announcements.show", compact("announcement"));
+    }
+
+    public function indexAnnouncement()
+    {
+        $announcements = Announcement::paginate(6);
+        return view("announcements.index", compact("announcements"));
+    }
+
+    // public function submitAnnouncement(Request $request){
+    //     // dd($request);
+    //     $announcement= Announcement::create([
+    //         "title" => $request->input("title"),
+    //         "description" => $request->input("description"),
+    //         "price" => $request->input("price"),
+    //     ]);
 
        
-    }
+    // }
 
 
 

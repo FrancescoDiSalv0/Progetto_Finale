@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PublicController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AnnouncementController;
 
 /*
@@ -15,11 +15,15 @@ use App\Http\Controllers\AnnouncementController;
 |
 */
 
-Route::get('/', [PublicController::class, "welcome"])->name("welcome");
+Route::get('/', [FrontController::class, "welcome"])->name("welcome");
+
+Route::get('/categoria/{category}',[FrontController::class, "categoryShow"])->name("categoryShow");
 // Rotta per pagina inserimento annuncio
 Route::get('/nuovo/annuncio', [AnnouncementController::class, "createAnnouncement"])->middleware("auth")->name("announcements.create");
-// Rotta di tipo Post per recuperare dati nuovo annuncio
-Route::post('/nuovo/annuncio/submit', [AnnouncementController::class, "submitAnnouncement"])->name("announcement.submit");
+
+// Route::post('/nuovo/annuncio/submit', [AnnouncementController::class, "submitAnnouncement"])->name("announcement.submit");
+Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, "showAnnouncement"])->name("announcements.show");
+Route::get('/tutti/annunci', [AnnouncementController::class, "indexAnnouncement"])->name("announcements.index");
 
 
 
