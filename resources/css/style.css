@@ -1,0 +1,25 @@
+:root{
+    --color-P: #f1dec5c0;
+    --color-S: #252323;
+    --color-A: #cca94a;
+}
+
+.bg-S{
+    background-color: var(--color-S);
+}
+
+.bg-P{
+    background-color: var(--color-P);
+}
+
+.color-A{
+    color: var(--color-A);
+}
+
+.img-custom{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0)) , url(/storage/app/public/img/AdobeStock_194408391.jpg);
+    background-size: cover;
+    background-position:center;
+}

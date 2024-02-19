@@ -1,12 +1,16 @@
 <x-layout>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1>Presto.it</h1>
-                <p class="my-2 fw-bold">I nostri Annunci</p>
+                <div class="row">
+                    <div class="col-12 img-custom">
+                        {{-- <img class="vh-100 vw-100" src="storage/img/AdobeStock_194408391.jpg" alt="foto"> --}}
+                    </div>
+                </div>
+                <h2 class="fw-bold text-center display-3">I nostri Annunci</h2>
                 <div class="row">
                     @foreach ($announcements as $announcement)
-                        <div class="col-12 col-md-4 my-4">
+                        <div class="col-12 col-md-4 p-5">
                             <div class="card shadow" style="width: 18rem;">
                                 <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                                 <div class="card-body">
@@ -23,4 +27,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </x-layout>

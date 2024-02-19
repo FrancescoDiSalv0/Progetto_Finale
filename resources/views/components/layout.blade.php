@@ -10,14 +10,14 @@
     @livewireStyles
 </head>
 
-<body>
+<body class="bg-P">
     <x-navbar/>
 
-    <div class="vh-100">
+    <div>
         {{$slot}}
     </div>
-{{-- 
-    <x-footer/> --}}
+
+    <x-footer/>
  @livewireScripts
 </body>
 </html>

@@ -1,5 +1,5 @@
 <x-layout>
-    <form method="POST" action={{route("register")}} >
+    <form class="my-5" method="POST" action={{route("register")}} >
         @csrf
         <div class="mb-3">
             <label  class="form-label">Nome Utente</label>
