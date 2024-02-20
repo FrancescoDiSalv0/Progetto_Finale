@@ -1,5 +1,5 @@
 <x-layout>
-<div class="container">
+<div class="container margine_cust">
     <div class="row">
         <div class="col-12">
             <h1>Ecco i nostri annunci</h1>
@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$announcement->title}}</h5>
                             <p class="card-text">{{$announcement->description}}</p>
-                            <p class="card-text">{{$announcement->price}}</p>
+                            <p class="card-text">{{$announcement->price}} € </p>
                             <a href="{{route('announcements.show',compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
                             <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
                                 {{ $announcement->category->name }} </a>

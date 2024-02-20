@@ -16,10 +16,122 @@
     color: var(--color-A);
 }
 
-.img-custom{
+/* .img-custom{
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0)) , url(/storage/app/public/img/AdobeStock_194408391.jpg);
     background-size: cover;
     background-position:center;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+body {
+    min-height: 100vh;
+    background-color: beige;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.425);
+    z-index: 9;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .5s;;
+}
+.header:hover::before {
+    left: 100%;
+}
+.logo {
+    color: #000000;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.navbar li{
+    list-style-type: none;
+}
+.navbar li a {
+    color: #000000;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar li a:hover {
+    color: #f00;
+}
+#usercustom a{
+    color: #000000;
+    font-weight: 600;
+}
+/* FINE EDIT NAVABAR */
+
+/* INIZIO VIEWS WELCOME */
+    .img.sfondo{
+        min-height: 100vh;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .welcome-title h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3rem;
+        color: white;
+        text-align: center;
+        text-shadow: 0 0 10px #000000;
+    }
+
+    .welcome-title p{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .card-custom{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 10px;
+            height: 100%;
+          }
+
+          /* correzioni al volo login / register / index */
+          .loginform{
+            margin-top: 10%;
+          }
+          .margine_cust{
+            margin-top: 10%;
+          }
+          .registerform{
+            margin-top: 10%;
+          }
