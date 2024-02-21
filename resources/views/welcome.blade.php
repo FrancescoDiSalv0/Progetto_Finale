@@ -1,10 +1,17 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
+            @if(session()->has("access.denied"))
+            <div class=" alert_custom alert alert-danger ">
+                {{ session("access.denied") }}
+            </div>
+        @endif
             <img class="img-sfondo m-0 p-0" src="img/header.jpg" alt="">
             <div class="col-12 welcome-title">
                 <h1>Sfoglia senza pensieri <br>sul nostro <span>Presto!</span></h1>
                 <p>I Nostri Annunci</p>
+            
+
                 <div class="container">
                     <div class="row">
                         @foreach ($announcements as $announcement)

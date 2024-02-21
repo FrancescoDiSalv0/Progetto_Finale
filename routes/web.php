@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
 /*
@@ -26,6 +27,15 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 Route::get('/tutti/annunci', [AnnouncementController::class, "indexAnnouncement"])->name("announcements.index");
 
 Route::get("/ricerca/annuncio", [FrontController::class, "searchAnnouncements"])->name("announcements.search");
+
+// Home Revisore
+Route::get('/revisor/home', [RevisorController::class, "index"])->middleware('isRevisor')->name("revisor.index");
+
+// Accetta Annuncio
+Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, "acceptAnnouncement"])->middleware('isRevisor')->name("revisor.accept_announcement");
+// Rifiuta Annuncio
+Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, "rejectAnnouncement"])->middleware('isRevisor')->name("revisor.reject_announcement");
+
 
 
 
