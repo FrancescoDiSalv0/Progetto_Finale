@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
-            <img class="img-sfondo m-0 p-0" src="/header.jpg" alt="">
+            <img class="img-sfondo m-0 p-0" src="img/header.jpg" alt="">
             <div class="col-12 welcome-title">
                 <h1>Sfoglia senza pensieri <br>sul nostro <span>Presto!</span></h1>
                 <p>I Nostri Annunci</p>
@@ -14,7 +14,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $announcement->title }}</h5>
                                         <p class="card-text">{{ $announcement->description }}</p>
-                                        <p class="card-text">{{ $announcement->price }}</p>
+                                        <p class="card-text">{{ $announcement->price }} € </p>
                                         <a href="#" class="btn btn-primary shadow">Visualizza</a>
                                         <a href="#"
                                             class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
