@@ -1,28 +1,31 @@
 <x-layout>
-    <div class="container margine_cust">
-        <div class="row">
-
-            <form class="my-5" method="POST" action={{route("register")}} >
+    <div class="login_register">
+            <form class="wrapp" method="POST" action={{route("register")}} >
                 @csrf
-                <div class="mb-3">
-                    <label  class="form-label">Nome Utente</label>
+                <div>
+                    <h1>Registrati</h1>
+                    <label  class="form-label my-3">Nome Utente</label>
                     <input type="text" class="form-control" name="name">
                 </div>
-                <div class="mb-3">
-                    <label  class="form-label">Email</label>
+                <div>
+                    <label  class="form-label my-3">Email</label>
                     <input type="email" class="form-control" name="email">
                 </div>
-                <div class="mb-3">
-                    <label  class="form-label">Password</label>
+                <div>
+                    <label  class="form-label my-3">Password</label>
                     <input type="password" class="form-control" name="password">
                 </div>
-                <div class="mb-3">
-                    <label  class="form-label">Conferma Password</label>
+                <div>
+                    <label  class="form-label my-3">Conferma Password</label>
                     <input type="password" class="form-control" name="password_confirmation" >
                 </div>
-                <button type="submit" class="btn btn-primary">Registrati</button>
+                <button type="submit" class="btn_custom my-4">Registrati</button>
+                <div class="register">
+                    <p>hai già un account? 
+                        <a href="{{route("login")}}">Accedi ora!</a>
+                    </p>
+                </div>
             </form>
-
         </div>
     </div>
 </x-layout>

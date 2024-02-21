@@ -1,10 +1,17 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
+            @if(session()->has("access.denied"))
+            <div class=" alert_custom alert alert-danger ">
+                {{ session("access.denied") }}
+            </div>
+        @endif
             <img class="img-sfondo m-0 p-0" src="img/header.jpg" alt="">
             <div class="col-12 welcome-title">
                 <h1>Sfoglia senza pensieri <br>sul nostro <span>Presto!</span></h1>
-                <p>I Nostri Annunci</p>
+                <p class="subtitle">I Nostri Annunci</p>
+            
+
                 <div class="container">
                     <div class="row">
                         @foreach ($announcements as $announcement)
@@ -15,10 +22,8 @@
                                         <h5 class="card-title">{{ $announcement->title }}</h5>
                                         <p class="card-text">{{ $announcement->description }}</p>
                                         <p class="card-text">{{ $announcement->price }} € </p>
-                                        <a href="#" class="btn btn-primary shadow">Visualizza</a>
-                                        <a href="#"
-                                            class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
-                                            {{ $announcement->category->name }} </a>
+                                        <a href="{{route('announcements.show',compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
+                                        <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:{{ $announcement->category->name }} </a>
                                         <p class="card-footer">Pubblicato il: {{ $announcement->created_at }} </p>
                                     </div>
                                 </div>

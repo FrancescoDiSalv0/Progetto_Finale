@@ -20,15 +20,32 @@
             <li><a href="{{ route('login') }}">Login</a></li>
         @else
             <li><a href="{{ route('announcements.create') }}">Inserisci Annuncio</a></li>
-            <li id="usercustom"><a href="">{{ Auth::user()->name }} </a></li>
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button class=" btn btn-danger mx-2" type="submit">Logout</button>
-            </form>
-        @endguest
+            @if (Auth::user()->is_revisor)
+                <li>
+                    <a href="{{ route('revisor.index') }}">Zona Revisore
+                        <span class="text-danger">
+                            {{ App\Models\Announcement::toBeRevisionedCount() }}
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </a>
+                </li>
+            @endif
+
+            <li class="nav-item dropdown" id="usercustom"><a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" href="">{{ Auth::user()->name }} </a>
+                <ul class="dropdown-menu">
+                    <li>
+                    <form class="dropdown-item" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class=" btn text-center mx-2" type="submit">Logout</button>
+                    </form>
+                    </li>
+                </ul>
+            </li>
+            
+            @endguest
     </ul>
 
-    <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+    <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
         <input name="searched" class="form-control me-2" type="search" placeholder= "Search" aria-label="Search">
         <button class=" btn btn-primary" type="submit">Search</button>
     </form>

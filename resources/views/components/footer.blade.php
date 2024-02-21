@@ -4,6 +4,7 @@
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                 <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
             </a>
+            <a href="{{route("become.revisor")}}">Lavora con noi</a>
             <p class="text-body-secondary">&copy; 2024</p>
         </div>
         
