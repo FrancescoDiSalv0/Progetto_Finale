@@ -15,7 +15,6 @@
             {{-- Guest endguest --}}
         <li><a href="{{ route('announcements.index') }}">Annunci</a></li>
 
-
         @guest
             <li><a href="{{ route('register') }}">Registrati</a></li>
             <li><a href="{{ route('login') }}">Login</a></li>
@@ -24,18 +23,25 @@
             @if (Auth::user()->is_revisor)
                 <li>
                     <a href="{{ route('revisor.index') }}">Zona Revisore
-                        <span>
+                        <span class="text-danger">
                             {{ App\Models\Announcement::toBeRevisionedCount() }}
                             <span class="visually-hidden">unread messages</span>
                         </span>
                     </a>
                 </li>
             @endif
-                <li id="usercustom"><a href="">{{ Auth::user()->name }} </a></li>
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button class=" btn btn-danger mx-2" type="submit">Logout</button>
-                </form>
+
+            <li class="nav-item dropdown" id="usercustom"><a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" href="">{{ Auth::user()->name }} </a>
+                <ul class="dropdown-menu">
+                    <li>
+                    <form class="dropdown-item" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class=" btn text-center mx-2" type="submit">Logout</button>
+                    </form>
+                    </li>
+                </ul>
+            </li>
+            
             @endguest
     </ul>
 

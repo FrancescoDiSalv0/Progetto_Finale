@@ -11,17 +11,21 @@
         <div class="col-12">
             <div class="row">
                 @forelse ($announcements as $announcement)
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card shadow" style="width: 18rem;">
-                            <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <div class="col-12 col-md-6 col-lg-4 my-4">
+                        <div class="card shadow card-custom">
+                            <a href="{{route('announcements.show',compact('announcement'))}}"><img src="https://picsum.photos/200" class="card-img-top" alt="foto-card"></a>
                             <div class="card-body">
-                                <h5 class="card-title">{{$announcement->title}}</h5>
-                                <p class="card-text">{{$announcement->description}}</p>
-                                <p class="card-text">{{$announcement->price}} € </p>
-                                <a href="{{route('announcements.show',compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
-                                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
-                                    {{ $announcement->category->name }} </a>
-                                <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? 'Sconosciuto'}} </p>
+                                <div class="my-1">
+                                <h3 class="card-title fw-bold">{{$announcement->title}}</h3>
+                                {{-- <p class="card-text">{{$announcement->description}}</p> --}}
+                                </div>
+                                <div class="my-4">
+                                <h4>{{$announcement->price}} € </h4>
+                                </div>
+                                <div class="text-center">
+                                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{ $announcement->category->name }}</a>
+                                </div>
+                                {{-- <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? 'Sconosciuto'}} </p> --}}
                             </div>
                         </div>
                     </div>
