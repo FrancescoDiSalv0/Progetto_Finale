@@ -15,7 +15,6 @@
             {{-- Guest endguest --}}
         <li><a href="{{ route('announcements.index') }}">Annunci</a></li>
 
-
         @guest
             <li><a href="{{ route('register') }}">Registrati</a></li>
             <li><a href="{{ route('login') }}">Login</a></li>
