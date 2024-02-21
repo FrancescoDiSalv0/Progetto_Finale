@@ -1,26 +1,26 @@
 <x-layout>
-    <form method="POST" action={{route("register")}} >
+    <form class="margine_cust" method="POST" action={{route("register")}} >
         @csrf
-        <div class="mb-3">
-            <label  class="form-label">Nome Utente</label>
-            <input type="text" class="form-control" name="name">
+        <div class="m-3">
+            <label  class="form-label"></label>
+            <input type="text" class="form-control" name="name" placeholder="Username">
         </div>
-        <div class="mb-3">
-            <label  class="form-label">Email</label>
-            <input type="email" class="form-control" name="email">
+        <div class="m-3">
+            <label  class="form-label"></label>
+            <input type="email" class="form-control" name="email" placeholder="Email">
         </div>
-        <div class="mb-3">
-            <label  class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
+        <div class="m-3">
+            <label  class="form-label"></label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
         </div>
-        <div class="mb-3">
-            <label  class="form-label">Conferma Password</label>
-            <input type="password" class="form-control" name="password_confirmation" >
+        <div class="m-3">
+            <label  class="form-label"></label>
+            <input type="password" class="form-control" name="password_confirmation" placeholder="Conferma Password" >
         </div>
-        <div class="mb-3 form-check">
+        <div class="m-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Ricordami</label>
         </div>
-        <button type="submit" class="btn btn-primary">Registrati</button>
+        <button type="submit" class="btn btn-primary m-2">Registrati</button>
     </form>
 </x-layout>
