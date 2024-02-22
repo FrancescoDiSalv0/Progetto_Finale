@@ -94,7 +94,6 @@ body {
 /* INIZIO VIEWS WELCOME */
     .img.sfondo{
         min-height: 100vh;
-
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -111,7 +110,8 @@ body {
         text-shadow: 0 0 10px #000000;
     }
 
-    .welcome-title p{
+    .welcome-title .subtitle
+    {
         display: flex;
         justify-content: center;
         margin-top: 20px;

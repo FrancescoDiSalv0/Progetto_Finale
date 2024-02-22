@@ -9,7 +9,7 @@
             <img class="img-sfondo m-0 p-0" src="img/header.jpg" alt="">
             <div class="col-12 welcome-title">
                 <h1>Sfoglia senza pensieri <br>sul nostro <span>Presto!</span></h1>
-                <p>I Nostri Annunci</p>
+                <p class="subtitle">I Nostri Annunci</p>
             
 
                 <div class="container">

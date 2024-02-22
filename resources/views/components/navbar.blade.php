@@ -12,6 +12,7 @@
                     </li>
                 @endforeach
             </ul>
+            </li>
             {{-- Guest endguest --}}
         <li><a href="{{ route('announcements.index') }}">Annunci</a></li>
 
@@ -31,11 +32,17 @@
                     </a>
                 </li>
             @endif
-                <li id="usercustom"><a href="">{{ Auth::user()->name }} </a></li>
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button class=" btn btn-danger mx-2" type="submit">Logout</button>
-                </form>
+                <li class="nav-item dropdown" id="usercustom"><a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" href="">{{ Auth::user()->name }} </a>
+                <ul class="dropdown-menu">
+                    <li><form class="dropdown-item" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class=" btn text-center mx-2" type="submit">Logout</button>
+                    </form>
+                </li>
+                </ul>
+                
+                
+                </li>
             @endguest
     </ul>
 
