@@ -110,8 +110,7 @@ body {
         text-shadow: 0 0 10px #000000;
     }
 
-    .welcome-title .subtitle
-    {
+    .welcome-title .subtitle{
         display: flex;
         justify-content: center;
         margin-top: 20px;
@@ -119,11 +118,15 @@ body {
         font-weight: 500;
     }
 
+
+
     .card-custom{
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             border-radius: 10px;
             height: 100%;
           }
+
+
           /* Form di Login */
           .login_register{
             margin-top: 10%;

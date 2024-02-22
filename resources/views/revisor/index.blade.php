@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container margine_cust">
         <div class="row">
             <div class="col-12">
                 <h1>{{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
@@ -8,8 +8,8 @@
         </div>
     </div>
     @if ($announcement_to_check)
-        <div class="container-">
-            <div class="row-">
+        <div class="container">
+            <div class="row">
                 <div class="col-12">
                     <div class="carousel slide carousel-fade">
                         <div class="carousel-inner">

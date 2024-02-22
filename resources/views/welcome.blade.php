@@ -22,10 +22,8 @@
                                         <h5 class="card-title">{{ $announcement->title }}</h5>
                                         <p class="card-text">{{ $announcement->description }}</p>
                                         <p class="card-text">{{ $announcement->price }} € </p>
-                                        <a href="#" class="btn btn-primary shadow">Visualizza</a>
-                                        <a href="#"
-                                            class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
-                                            {{ $announcement->category->name }} </a>
+                                        <a href="{{route('announcements.show',compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
+                                        <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:{{ $announcement->category->name }} </a>
                                         <p class="card-footer">Pubblicato il: {{ $announcement->created_at }} </p>
                                     </div>
                                 </div>
