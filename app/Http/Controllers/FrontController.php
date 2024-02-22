@@ -22,4 +22,9 @@ class FrontController extends Controller
         return view('announcements.index', compact('announcements'));
         // where('is_accepted', true)
     }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

@@ -9,14 +9,14 @@
                         <a href="{{route('announcements.show',compact('announcement'))}}"><img src="https://picsum.photos/200" class="card-img-top" alt="foto-card"></a>
                         <div class="card-body">
                             <h5 class="card-title">{{$announcement->title}}</h5>
-                            <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria: {{$announcement->category->name}} </a>
+                            <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{__("ui.Category")}} {{__("ui.$announcement->category->name")}} </a>
                         </div>
                     </div>
                 </div>
                 @empty
                     <div class="col-12">
-                        <p class="h1">Non sono presenti annunci di questa categoria</p>
-                        <p class="h2">Pubblicane uno: <a href="{{route('announcements.create')}}" class="btn btn-success shadow">Nuovo Annuncio</a></p>
+                        <p class="h1">{{__("ui.nocategory")}}</p>
+                        <p class="h2">{{__("ui.publishthis")}} <a href="{{route('announcements.create')}}" class="btn btn-success shadow">{{__("ui.newAnnouncement")}}</a></p>
                     </div>
                 @endforelse
             </div>
