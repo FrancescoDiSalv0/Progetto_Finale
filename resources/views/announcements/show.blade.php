@@ -2,7 +2,7 @@
     <div class="container margine_cust">
         <div class="row">
             <div class="col-12">
-                <h1>Annuncio {{ $announcement->title }} </h1>
+                <h1> {{ $announcement->title }} </h1>
             </div>
         </div>
     </div>
@@ -32,12 +32,12 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <h5 class="card-title">Titolo: {{ $announcement->title }}</h5>
-                <p class="card-text">Descrizione: {{ $announcement->description }}</p>
-                <p class="card-text">Prezzo: {{ $announcement->price }} € </p>
-                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
-                    {{ $announcement->category->name }} </a>
-                <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? 'Sconosciuto'}} </p>
+                <h5 class="card-title">{{__("ui.titolo")}}: {{ $announcement->title }}</h5>
+                <p class="card-text">{{__("ui.descrizione")}}: {{ $announcement->description }}</p>
+                <p class="card-text">{{__("ui.prezzo")}}: {{ $announcement->price }} € </p>
+                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{ __('ui.Category') }}
+                    {{ __('ui.' . $announcement->category->name) }} </a>
+                <p class="card-footer">{{__("ui.pubblicato")}}: {{$announcement->created_at->format('d/m/Y')}} - {{__("ui.autore")}}: {{$announcement->user->name ?? 'Unknown'}} </p>
             </div>
         </div>
     </div>

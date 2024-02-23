@@ -16,11 +16,11 @@
                 <label><input type="checkbox">Ricordami</label>
                 <label><a href="#">Password Dimenticata?</a></label>
             </div> --}}
-            <button type="submit" class="btn_custom my-5">Accedi</button>
+            <button type="submit" class="btn_custom my-5"> {{__("ui.accedi")}}</button>
 
             <div class="register">
-                <p>Non hai un account? 
-                    <a href="{{route("register")}}">Registrati!</a>
+                <p> {{__("ui.noaccount")}}
+                    <a href="{{route("register")}}">{{__("ui.registrati")}}</a>
                 </p>
             </div>
         </form>

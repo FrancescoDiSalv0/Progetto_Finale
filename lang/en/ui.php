@@ -24,4 +24,43 @@ return [
     "inserisciAnnuncio" =>"Insert Article",
     "nocategory" => "There are no articles in this category",
     "publishthis" => "Publish an article",
+    "annunciodarevisionare" => "Here is the article to review: ", 
+    "noannunciodarevisionare" => "There are no articles to review",
+    "titolo" => "Title",
+    "descrizione"=>"Description",
+    "prezzo" => "Price",
+    "pubblicato" => "Published on",
+    "accetta" => "Accept",
+    "rifiuta" => "Reject",
+    "creaannuncio" => "Create your article",
+    "titoloannuncio"=>"Article Title",
+    "categoria" => "Category",
+    "selezionacategoria"=>"Select Category",
+    "crea" => "Publish",
+    "lavoraconnoi" => "Work with us",
+    "contatti"  => "Contact",
+    "chisiamo" => "About us",
+    "accedi"  => "Sign in",
+    "registrati" => "Join us!",
+    "noaccount" => "Don't have an account?",
+    "registratiform" => "Sign up",
+    "nomeutente" => "Username",
+    "confermapassword" => "Confirm Password",
+    "giaregistrato" => "Already have an account?",
+    "accediora" => "Sign in now!",
+    "noannunciricerca" => "There are no articles for this search, try changing the keyword",
+    "autore" => "Author",
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];

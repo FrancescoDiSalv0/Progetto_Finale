@@ -3,7 +3,7 @@
 return [ 
     "allAnnouncements" => "I nostri annunci",
     "newAnnouncement" => "Nuovo annuncio",
-    "Browse carefree on our website" => "naviga nel nostro sito",
+    "Browse carefree on our website" => "Naviga nel nostro sito senza pensieri",
     "View" => "Visualizza",
     "Category" => "Categoria: ",
     "published" => "Pubblicato il :",
@@ -24,4 +24,36 @@ return [
     "inserisciAnnuncio" =>"Inserisci Annuncio",
     "nocategory" => "Non sono presenti annunci di questa categoria",
     "publishthis" => "Pubblica un annuncio",
+    "annunciodarevisionare" => "Ecco l'annuncio da revisionare",
+    "noannunciodarevisionare" => "Non ci sono annunci da revisionare",
+    "titolo" => "Titolo",
+    "descrizione" => "Descrizione",
+    "prezzo" => "Prezzo",
+    "pubblicato" => "Pubblicato il",
+    "accetta" => "Accetta",
+    "rifiuta" => "Rifiuta",
+    "creaannuncio" => "Crea il tuo annuncio",
+    "titoloannuncio"=>"Titolo Annuncio",
+    "categoria" => "Categoria",
+    "selezionacategoria"=>"Seleziona Categoria",
+    "crea" => "Crea",
+    "lavoraconnoi" => "Lavora con noi",
+    "contatti"  => "Contatti",
+    "chisiamo" => "Chi siamo",
+    "accedi" => "Accedi",
+    "registrati" => "Registrati!",
+    "noaccount" => "Non hai un account?",
+    "registratiform" => "Registrati",
+    "nomeutente" => "Nome utente",
+    "confermapassword" => "Conferma Password",
+    "giaregistrato" => "Sei già registrato?",
+    "accediora" => "Accedi ora!",
+    "noannunciricerca" => "Non ci sono annunci per questa ricerca. Prova a cambiare parola",
+    "autore" => "Autore",
+
+
+
+
+
+
 ];
