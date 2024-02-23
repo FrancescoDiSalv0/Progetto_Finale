@@ -1,5 +1,5 @@
 <header class="header">
-    <a href="{{ route('welcome') }}" class="logo">Presto.it</a>
+    <a href="{{ route('welcome') }}" ><img class="logo" src="/img/PrestoLogo.png" alt=""></a>
     <ul class="navbar">
         {{-- Dropdown con foreach --}}
         <li class="nav-item dropdown">
