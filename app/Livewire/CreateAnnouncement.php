@@ -28,12 +28,13 @@ class CreateAnnouncement extends Component
         'title' =>'required|min:4',
         'description' =>'required|min:8',
         'category' =>'required',
-        'price' =>'required|numeric',
+        'price' =>'required|max:8',
     ];
 
     protected $messages = [
         'required' => 'Il campo :attribute è obbligatorio',
         'min' => 'Il campo :attribute deve essere lungo almeno :min caratteri',
+        'max' => 'Il campo :attribute può essere lungo massimo :max caratteri',
         'numeric' => 'Il campo :attribute deve essere numerico',
     ];
 

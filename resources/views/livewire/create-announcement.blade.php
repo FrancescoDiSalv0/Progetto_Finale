@@ -1,5 +1,5 @@
 <div>
-    <h1 class="text-center">Crea il tuo annuncio!</h1>
+    <h1 class="text-center"> {{__("ui.creaannuncio")}}</h1>
 
     @if (session()->has('message'))
     <div class="flex flex-row justify-center my-2 alert alert-success">
@@ -12,7 +12,7 @@
     <form required wire:submit.prevent="store">
     @csrf
         <div class="mb-3">
-          <label for="title">Titolo Annuncio</label>
+          <label for="title"> {{__("ui.titoloannuncio")}}</label>
           <input type="text" required wire:model.live="title" class="form-control @error('title') is-invalid @enderror">
           @error('title')
             {{ $message }}
@@ -21,7 +21,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="description">Descrizione</label>
+          <label for="description"> {{__("ui.descrizione")}}</label>
           <textarea type="text" required wire:model.live="description" class="form-control @error('description') is-invalid @enderror"></textarea>
           @error('description')
             {{ $message }}
@@ -29,7 +29,7 @@
         </div>
         
         <div class="mb-3">
-          <label for="price">Prezzo</label>
+          <label for="price"> {{__("ui.prezzo")}} </label>
           <input  type="number" required wire:model.live="price" class="form-control @error('price') is-invalid @enderror">
           @error('price')
           {{ $message }}
@@ -37,16 +37,16 @@
         </div>
 
         <div class="mb-3">
-          <label for="category">Categoria</label>
+          <label for="category"> {{__("ui.categoria")}}</label>
           <select required wire:model.defer="category" id="category" class="form-control">
-            <option value="">Scegli la Categoria</option>
+            <option value="">{{__("ui.selezionacategoria")}} </option>
             @foreach ($categories as $category)
-            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            <option value="{{ $category->id }}"> {{ __("ui.$category->name") }} </option>
             @endforeach
           </select>
         </div>
        
-        <button type="submit" class="btn btn-primary">Crea</button>
+        <button type="submit" class="btn btn-primary"> {{__("ui.crea")}} </button>
       </form>
 
 </div>

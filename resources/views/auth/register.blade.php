@@ -3,8 +3,8 @@
             <form class="wrapp" method="POST" action={{route("register")}} >
                 @csrf
                 <div>
-                    <h1>Registrati</h1>
-                    <label  class="form-label my-3">Nome Utente</label>
+                    <h1> {{__("ui.registratiform")}} </h1>
+                    <label  class="form-label my-3"> {{__("ui.nomeutente")}} </label>
                     <input type="text" class="form-control" name="name">
                 </div>
                 <div>
@@ -16,13 +16,13 @@
                     <input type="password" class="form-control" name="password">
                 </div>
                 <div>
-                    <label  class="form-label my-3">Conferma Password</label>
+                    <label  class="form-label my-3">{{__("ui.confermapassword")}}</label>
                     <input type="password" class="form-control" name="password_confirmation" >
                 </div>
-                <button type="submit" class="btn_custom my-4">Registrati</button>
+                <button type="submit" class="btn_custom my-4"> {{__("ui.registratiform")}}</button>
                 <div class="register">
-                    <p>hai già un account? 
-                        <a href="{{route("login")}}">Accedi ora!</a>
+                    <p> {{__("ui.giaregistrato")}} 
+                        <a href="{{route("login")}}"> {{__("ui.accediora")}} </a>
                     </p>
                 </div>
             </form>

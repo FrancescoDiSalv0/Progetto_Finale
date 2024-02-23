@@ -2,7 +2,7 @@
 <div class="container margine_cust">
     <div class="row">
         <div class="col-12">
-            <h1>Ecco i nostri annunci</h1>
+            <h1> {{__("ui.allAnnouncements")}} </h1>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
                                 <h4>{{$announcement->price}} € </h4>
                                 </div>
                                 <div class="text-center">
-                                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{ $announcement->category->name }}</a>
+                                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{ __('ui.' . $announcement->category->name) }} </a>
                                 </div>
                                 {{-- <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? 'Sconosciuto'}} </p> --}}
                             </div>
@@ -32,7 +32,7 @@
                 @empty
                     <div class="col-12">
                         <div class="alert alert-warning py-3 shadow">
-                            <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiare parola </p>
+                            <p class="lead"> {{__("ui.noannunciricerca")}}</p>
                         </div>
                     </div>
                 @endforelse

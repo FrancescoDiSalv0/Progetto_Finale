@@ -1,29 +1,39 @@
 <header class="header">
+<<<<<<< HEAD
     <a href="{{ route('welcome') }}" ><img class="logo" src="/img/PrestoLogo.png" alt=""></a>
+=======
+>>>>>>> d88c797fd441e369607158cefe16eb40eae2af63
     <ul class="navbar">
+        <a href="{{ route('welcome') }}" class="logo margin-cust">Presto.it</a>
         {{-- Dropdown con foreach --}}
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categorie</a>
-
-            <ul class="dropdown-menu"> {{-- Menu dropdown da modificare daje roma --}}
+        <div class="nav-item dropdown category-cust">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">{{__("ui.Categorie")}}</a>
+            <ul class="dropdown-menu">
                 @foreach ($categories as $category)
-                    <li><a class="dropdown-item"
-                            href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }} </a>
-                    </li>
+                    <div class="dropdown-item">
+                    <a href="{{ route('categoryShow', compact('category')) }}">{{__( "ui.$category->name" )}}</a>
+                    </div>
                 @endforeach
             </ul>
+<<<<<<< HEAD
             </li>
             {{-- Guest endguest --}}
         <li><a href="{{ route('announcements.index') }}">Annunci</a></li>
+=======
+        </div>
+
+        {{-- Guest --}}
+        <li class="nav-item"><a href="{{ route('announcements.index') }}">{{__("ui.articles")}}</a></li>
+>>>>>>> d88c797fd441e369607158cefe16eb40eae2af63
 
         @guest
-            <li><a href="{{ route('register') }}">Registrati</a></li>
-            <li><a href="{{ route('login') }}">Login</a></li>
+            <li class="nav-item"><a href="{{ route('register') }}">{{__("ui.Registrati")}}</a></li>
+            <li class="nav-item"><a href="{{ route('login') }}">Login</a></li>
         @else
-            <li><a href="{{ route('announcements.create') }}">Inserisci Annuncio</a></li>
+            
             @if (Auth::user()->is_revisor)
-                <li>
-                    <a href="{{ route('revisor.index') }}">Zona Revisore
+                <li class="nav-item">
+                    <a href="{{ route('revisor.index') }}">{{__("ui.zonarevisore")}}</a>
                         <span class="text-danger">
                             {{ App\Models\Announcement::toBeRevisionedCount() }}
                             <span class="visually-hidden">unread messages</span>
@@ -34,20 +44,48 @@
 
             <li class="nav-item dropdown" id="usercustom"><a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" href="">{{ Auth::user()->name }} </a>
                 <ul class="dropdown-menu">
-                    <li>
-                    <form class="dropdown-item" action="{{ route('logout') }}" method="POST">
+                <div>
+                    <div class="nav-item btn text-center mx-2">
+                    <a href="{{ route('announcements.create') }}">{{__("ui.inserisciAnnuncio")}}</a>
+                    </div>
+                    <div><hr class="dropdown-divider"></div>
+                    <form class="dropdown-item text-center" action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button class=" btn text-center mx-2" type="submit">Logout</button>
+                        <button class="btn text-center mx-2 text-danger" type="submit">Logout</button>
                     </form>
-                    </li>
+                </div>
                 </ul>
             </li>
-            
-            @endguest
+        @endguest
+        {{-- Endguest --}}
+
+        {{-- Searchbar --}}
+        <li class="nav-item searchbar-cust wrapp login_register">
+            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
+                <input name="searched" class="form-control me-2" type="search" placeholder= "Search" aria-label="Search">
+                <button class="btn" type="submit"><i class="bi bi-search h4"></i></button>
+            </form>
+        </li>
+        {{-- End searchbar --}}
+
+
+        {{-- Language --}}
+            <div class="dropdown">
+                <a class="dropdown-toggle lang-cust" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="h2 bi bi-globe-americas"></span></a>
+                <ul class="dropdown-menu">
+                    <div class="dropdown-item text-center">
+                        <x-locale lang="it" nation="it"/>
+                    </div>
+                    <div class="dropdown-item text-center">
+                        <x-locale lang="en" nation="gb"/>
+                    </div>
+                    {{-- <li class="nav-item">
+                    <x-locale lang="es" nation="es"/>
+                    </li> --}}
+                </ul>
+            </div>
+        {{-- End language --}}
+
     </ul>
 
-    <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
-        <input name="searched" class="form-control me-2" type="search" placeholder= "Search" aria-label="Search">
-        <button class=" btn btn-primary" type="submit">Search</button>
-    </form>
 </header>
