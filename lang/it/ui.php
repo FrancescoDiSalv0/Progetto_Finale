@@ -1,0 +1,27 @@
+<?php
+
+return [ 
+    "allAnnouncements" => "I nostri annunci",
+    "newAnnouncement" => "Nuovo annuncio",
+    "Browse carefree on our website" => "naviga nel nostro sito",
+    "View" => "Visualizza",
+    "Category" => "Categoria: ",
+    "published" => "Pubblicato il :",
+    "Elettronica" => "Elettronica",
+    "Abbigliamento e accessori" =>         "Abbigliamento e accessori",
+    "Casa e giardino" =>         "Casa e giardino",
+    "Sport e tempo libero" =>         "Sport e tempo libero",
+    "Salute e bellezza" =>         "Salute e bellezza",
+    "Libri, film e musica" =>         "Libri, film e musica",
+    "Prodotti per bambini e neonati" =>         "Prodotti per bambini e neonati",
+    "Cibo e bevande" =>         "Cibo e bevande",
+    "Articoli per animali domestici" =>         "Articoli per animali domestici",
+    "Articoli per ufficio e scuola" =>     "Articoli per ufficio e scuola",
+    "articles" => "Annunci",
+    "Registrati" => "Registrati",
+    "Categorie" => "Categorie",
+    "zonarevisore" => "Area Revisore",
+    "inserisciAnnuncio" =>"Inserisci Annuncio",
+    "nocategory" => "Non sono presenti annunci di questa categoria",
+    "publishthis" => "Pubblica un annuncio",
+];

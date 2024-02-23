@@ -19,7 +19,9 @@ return new class extends Migration
 
             $table->timestamps();
         });
-        $categories = ["Elettronica", "Abbigliamento e accessori",
+        $categories = [
+        "Elettronica",
+        "Abbigliamento e accessori",
         "Casa e giardino",
         "Sport e tempo libero",
         "Salute e bellezza",
@@ -27,7 +29,8 @@ return new class extends Migration
         "Prodotti per bambini e neonati",
         "Cibo e bevande",
         "Articoli per animali domestici",
-        "Articoli per ufficio e scuola"];
+        "Articoli per ufficio e scuola"
+    ];
 
         foreach ($categories as $category) {
             Category::create(["name" => $category]);
