@@ -1,5 +1,6 @@
 <header class="header">
     <ul class="navbar">
+        {{-- prova per vito --}}
         <a href="{{ route('welcome') }}" class="logo margin-cust">Presto.it</a>
         {{-- Dropdown con foreach --}}
         <div class="nav-item dropdown category-cust">
