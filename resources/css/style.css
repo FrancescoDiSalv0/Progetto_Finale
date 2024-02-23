@@ -58,15 +58,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-<<<<<<< HEAD
-    padding: 20px 100px;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-=======
     padding: 5px 35px;
     background: rgba(255, 255, 255, .1);
     display:flex;
->>>>>>> 7a059c926be06ee29ca248904937759039043842
     justify-content: space-between;
     align-items:center;
     backdrop-filter: blur(10px);
