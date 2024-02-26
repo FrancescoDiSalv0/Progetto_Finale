@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Document</title>
+    <title>Presto.it</title>
     @livewireStyles
 </head>
 
 <body>
     <x-navbar/>
 
-    <div class="vh-100">
+    <div>
         {{$slot}}
     </div>
 
