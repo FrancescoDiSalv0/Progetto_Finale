@@ -252,3 +252,12 @@ a:hover {
             position: absolute;
             margin-top: 7%;
           }
+
+          .img-preview{
+            height: 50vh;
+            width: 50vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+          }
