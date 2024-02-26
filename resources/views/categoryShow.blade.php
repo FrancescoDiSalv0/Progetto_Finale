@@ -6,7 +6,7 @@
                 @forelse ($category->announcements as $announcement)
                 <div class="col-12 col-md-4 my-4">
                     <div class="card shadow justify-content-center" style="width: 18rem;">
-                        <a href="{{route('announcements.show',compact('announcement'))}}"><img src="https://picsum.photos/200" class="card-img-top" alt="foto-card"></a>
+                        <a href="{{route('announcements.show',compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="card-img-top" alt="foto-card"></a>
                         <div class="card-body">
                             <h5 class="card-title">{{$announcement->title}}</h5>
                             <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{__("ui.Category")}} {{__("ui." . $announcement->category->name)}} </a>
