@@ -43,5 +43,9 @@ Route::get("/richiesta/revisore",[RevisorController::class, "becomeRevisor"])->m
 // rendi utente revisore
 Route::get("/rendi/revisore/{user}",[RevisorController::class, "makeRevisor"])->name("make.revisor");
 
+// Form richiesta revisore
+Route::get("/richiesta/revisore/form",[RevisorController::class, "requestForm"])->middleware("auth")->name("revisor.request");
+
 // cambio lingua
 Route::post("/lingua/{lang}", [FrontController::class, "setLanguage"])->name("set_language_locale");
+

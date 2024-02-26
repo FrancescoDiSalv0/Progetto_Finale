@@ -6,7 +6,7 @@
                     {{ session('access.denied') }}
                 </div>
             @endif
-            <img class="img-sfondo m-0 p-0" src="img/header.jpg" alt="">
+            <img class="img-sfondo p-0" src="img/header.jpg" alt="">
             <div class="col-12 welcome-title">
                 <h1>{{ __('ui.Browse carefree on our website') }} <span>Presto!</span></h1>
                 <p class="subtitle">{{ __('ui.allAnnouncements') }}</p>
@@ -15,7 +15,7 @@
                         @foreach ($announcements as $announcement)
                             <div class="col-12 col-md-4 my-4">
                                 <div class="card card-custom">
-                                    <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()-> path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
+                                    <a href="{{route('announcements.show',compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()-> path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="foto-card"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $announcement->title }}</h5>
                                         <p class="card-text">{{ $announcement->description }}</p>

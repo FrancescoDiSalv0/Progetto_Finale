@@ -6,20 +6,20 @@
                 <div>
                     <h1> {{__("ui.registratiform")}} </h1>
                     <label  class="form-label my-3"></label>
-                    <input type="text" class="form-control" name="name" placeholder="{{__("ui.nomeutente")}} ">
+                    <input type="text"  placeholder="{{__("ui.nomeutente")}}" name="name" >
                 </div>
                 <div>
                     <label  class="form-label my-3"></label>
-                    <input type="email" class="form-control" name="email" placeholder="Email">
+                    <input type="email" placeholder="Email" name="email" >
                 </div>
                 <div>
                     <label  class="form-label my-3"></label>
-                    <input type="password" class="form-control" name="password" placeholder="Password">
+                    <input type="password" placeholder="Password" name="password" >
                 </div>
-                {{-- <div>
+                <div>
                     <label  class="form-label my-3"></label>
-                    <input type="password" class="form-control" name="password_confirmation" placeholder="{{__("ui.confermapassword")}}" >
-                </div> --}}
+                    <input type="password" placeholder="{{__("ui.confermapassword")}}" name="password_confirmation" >
+                </div>
                 <button type="submit" class="btn_custom my-4"> {{__("ui.registratiform")}}</button>
                 <div class="register">
                     <p> {{__("ui.giaregistrato")}} 

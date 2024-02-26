@@ -156,10 +156,11 @@ a:hover {
 /* FINE EDIT NAVABAR */
 
 /* INIZIO VIEWS WELCOME */
-    .img.sfondo{
-        min-height: 100vh;
+    .img-sfondo{
+        max-height: 100%;
         background-size: cover;
         background-repeat: none;
+        transform: translate(0, -5%);
     }
     .welcome-title h1{
         position: absolute;
@@ -246,10 +247,18 @@ a:hover {
             font-size: 16px;
             padding: 20px 40px 20px 20px;
           }
-            input::placeholder{
-            color: #2e2e2e;
+           
+          input::placeholder{
+            color: rgb(19, 19, 19);
           }
-          .wrapp .remember-forgot{
+    
+          input:hover{
+            color: #2e2e2e;
+            background-color: rgb(236, 236, 236);
+          }
+
+
+          /* .wrapp .remember-forgot{
             display: flex;
             font-size: 14.5px;
             margin: -15px 0 15px;
@@ -262,7 +271,7 @@ a:hover {
           }
           .remember-forgot a:hover{
             text-decoration: underline;
-          }
+          } */
 
           .wrapp .btn_custom{
             width: 100%;
@@ -276,8 +285,7 @@ a:hover {
             font-weight: 600;
           }
 
-          /*  */
-         
+
 
           /* FOOTER */
           .container{

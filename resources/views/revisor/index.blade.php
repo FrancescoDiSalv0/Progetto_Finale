@@ -2,7 +2,7 @@
     <div class="container margine_cust">
         <div class="row">
             <div class="col-12">
-                {{-- <h1> {{ $announcement_to_check ? "Ecco l'annuncio da revisionare" : 'Non ci sono annunci da revisionare' }} </h1> --}}
+                
                 <h1> {{ $announcement_to_check ? __('ui.annunciodarevisionare') : __('ui.noannunciodarevisionare') }}
                 </h1>
             </div>
@@ -48,12 +48,10 @@
                     <h5 class="card-title"> {{ __('ui.titolo') }} : {{ $announcement_to_check->title }}</h5>
                     <p class="card-text"> {{ __('ui.descrizione') }} : {{ $announcement_to_check->description }}</p>
                     <p class="card-text"> {{ __('ui.prezzo') }} : {{ $announcement_to_check->price }} € </p>
-                    {{-- <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                        class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
-                        {{ $announcement->category->name }} </a> --}}
+                 
                     <p class="card-footer"> {{ __('ui.pubblicato') }} :
                         {{ $announcement_to_check->created_at->format('d/m/Y') }}
-                        {{-- - Autore:{{ $announcement->user->name ??'Sconosciuto' }}  --}}
+                      
                     </p>
                 </div>
             </div>
