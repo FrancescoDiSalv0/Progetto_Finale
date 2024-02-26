@@ -46,23 +46,22 @@
 }
 
 body {
-    min-height: 100%;
-    background-color: beige;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 1000px;
+    background-color: #e2e2e2;
 }
 
-
+/* Inizio Navbar */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 5px 35px;
+    height: 80px;
+    padding: 0px 30px;
     background: rgba(255, 255, 255, .1);
     display:flex;
-    justify-content: space-between;
-    align-items:center;
+    justify-content: center;
     backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(255, 255, 255, 0.425);
     z-index: 9;
@@ -80,28 +79,14 @@ body {
 .header:hover::before {
     left: 100%;
 }
-.logo {
-    color: #000000;
-    font-size: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-right: 130px;
-    cursor: pointer;
-}
 
+  
 a{
   text-decoration: none;
   color: #000000;
 }
 a:hover {
-  color: #f00;
-}
-
-.lang-cust{
-  position: relative;
-  left: 110%;
-  top: 7px;
+  color: #fe9221;
 }
 
 .category-cust{
@@ -114,7 +99,24 @@ a:hover {
     transition: .3s;
 }
 
-.navbar li{
+.nav_custom{
+  display: flex;
+  align-items:center;
+}
+.nav_custom a{
+  width: 50%;
+}
+.logo{
+  display: flex;
+  width: 15%;
+  margin-top: 15px;
+  margin-right: 300px;
+  float: inline-start;
+  padding: 0;
+}
+
+.nav_custom li{
+    justify-content: center;
     list-style-type: none;
     color: #000000;
     font-size: 18px;
@@ -124,8 +126,8 @@ a:hover {
     transition: .3s;
 }
 
-.navbar li a:hover {
-    color: #f00;
+.nav_custom li a:hover {
+    color: #fe9221;
 }
 #usercustom a{
     color: #000000;
@@ -133,7 +135,23 @@ a:hover {
 }
 .searchbar-cust{
     margin-left: 50px;
-    
+    width: 420px;
+    color: #2e2e2e;
+    border-radius: 40px;
+    padding: 20px;;
+    outline: none;
+}
+
+.searchbar-cust input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #2e2e2e;
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 12px 40px 12px 20px;
 }
 /* FINE EDIT NAVABAR */
 
@@ -141,7 +159,7 @@ a:hover {
     .img.sfondo{
         min-height: 100vh;
         background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: none;
     }
     .welcome-title h1{
         position: absolute;
@@ -164,29 +182,45 @@ a:hover {
         font-weight: 500;
     }
 
+    .welcome-title span{
+      color: #fe9221;
+    }
 
 
     .card-custom{
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
             border-radius: 10px;
-            height: 100%;
+            height: 650px;
+          }
+
+          .btn{
+            color: #fe9221;
           }
 
 
           /* Form di Login */
           .login_register{
-            margin-top: 10%;
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+          #bgcustom{
+            background: url(/public/img/sfondologinregister.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;  
+            height: 1080px;
+            display: flex;
+            justify-content: center;
           }
           .wrapp{
             width: 420px;
             color: #2e2e2e;
             border: 5px solid #2e2e2e;
-            border-radius: 10px;
+            border-radius: 40px;
             backdrop-filter: blur(20px);
-            padding: 20px;
+            padding: 20px;;
             outline: none;
           }
           .wrapp h1{
@@ -196,10 +230,9 @@ a:hover {
             color: white;
             text-shadow: 0 0 4px #2e2e2e;
           }
-          .wrapp .form_label{
+          .wrapp .form-label{
             width: 100%;
-            height: 50px;
-            margin: 30px 10;
+            height: 15px;
           }
 
           .wrapp input{
@@ -211,7 +244,7 @@ a:hover {
             border: 2px solid #2e2e2e;
             border-radius: 40px;
             font-size: 16px;
-            padding: 20px 45px 20px 20px;
+            padding: 20px 40px 20px 20px;
           }
             input::placeholder{
             color: #2e2e2e;
@@ -244,11 +277,110 @@ a:hover {
           }
 
           /*  */
-          /* correzioni al volo login / register / index */
-          .margine_cust{
+         
+
+          /* FOOTER */
+          .container{
+            max-width: 1170px;
+            margin:auto;
+          }
+          .row{
+            display: flex;
+            flex-wrap: wrap;
+          }
+          ul{
+            list-style: none;
+          }
+          .footer{
+            background-color: #24262b;
+              padding: 70px 0;
+          }
+          .footer-col{
+             width: 25%;
+             padding: 0 15px;
+          }
+          .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+          }
+          .footer-col h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+          }
+          .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+          }
+          .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+          }
+          .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+          }
+          .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+          }
+          .footer-col .social-links a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+          }
+          
+          /*responsive*/
+          @media(max-width: 767px){
+            .footer-col{
+              width: 50%;
+              margin-bottom: 30px;
+          }
+          }
+          @media(max-width: 574px){
+            .footer-col{
+              width: 100%;
+          }
+          }
+
+           /* correzioni al volo login / register / index */
+           .margine_cust{
             margin-top: 10%;
           }
           .alert_custom{
             position: absolute;
             margin-top: 7%;
           }
+
+          /* MEDIA QUERY x francesco */
+      @media (max-width: 1366px)
+      { .nav_custom a {
+          width: 20%;
+        }
+
+        .nav_custom img{
+          width: 50%;
+          margin-right: 350px;
+        }
+      }

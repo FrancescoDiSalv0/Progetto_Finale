@@ -1,10 +1,10 @@
 <?php
 
 return [ 
-    "allAnnouncements" => "I nostri annunci",
+    "allAnnouncements" => "I Nostri Annunci",
     "newAnnouncement" => "Nuovo annuncio",
     "Browse carefree on our website" => "Naviga nel nostro sito senza pensieri",
-    "View" => "Visualizza",
+    // "View" => "Visualizza",
     "Category" => "Categoria: ",
     "published" => "Pubblicato il :",
     "Elettronica" => "Elettronica",
@@ -20,7 +20,7 @@ return [
     "articles" => "Annunci",
     "Registrati" => "Registrati",
     "Categorie" => "Categorie",
-    "zonarevisore" => "Area Revisore",
+    "revisioni" => "Revisioni",
     "inserisciAnnuncio" =>"Inserisci Annuncio",
     "nocategory" => "Non sono presenti annunci di questa categoria",
     "publishthis" => "Pubblica un annuncio",
@@ -50,6 +50,7 @@ return [
     "accediora" => "Accedi ora!",
     "noannunciricerca" => "Non ci sono annunci per questa ricerca. Prova a cambiare parola",
     "autore" => "Autore",
+    "seguici" => "Seguici su",
 
 
 

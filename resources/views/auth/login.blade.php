@@ -1,14 +1,15 @@
 <x-layout>
+    <div id="bgcustom">
     <div class="login_register">
         <form class="wrapp" method="POST" action={{ route('login') }}>
             @csrf
             <div>
                 <h1>Login</h1>
-                <label class="form_label"></label>
+                <label class="form-label"></label>
                 <input type="email" placeholder="Email" name="email">
             </div>
             <div>
-                <label class="form_label"></label>
+                <label class="form-label"></label>
                 <input type="password" placeholder="Password" name="password">
             </div>
 
@@ -25,4 +26,5 @@
             </div>
         </form>
     </div>
+</div>
 </x-layout>

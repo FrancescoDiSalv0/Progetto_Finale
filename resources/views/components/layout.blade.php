@@ -10,7 +10,7 @@
     @livewireStyles
 </head>
 
-<body class="bg-P">
+<body>
     <x-navbar/>
 
     <div>

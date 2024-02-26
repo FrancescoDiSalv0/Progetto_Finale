@@ -4,7 +4,7 @@ return [
     "allAnnouncements" => "All Articles",
     "newAnnouncement" => "New Article",
     "Browse carefree on our website" => "Browse carefree on our website",
-    "View" => "View",
+    // "View" => "View",
     "Category" => "Category: ",
     "published" => "Published on :",
     "Elettronica" => "Electronics",
@@ -18,9 +18,9 @@ return [
     "Articoli per animali domestici" =>     "Pet supplies",
     "Articoli per ufficio e scuola" =>    "Office and school supplies",
     "articles" => "Articles",
-    "Registrati" => "Sign Up",
+    "Registrati" => "Sign_Up",
     "Categorie" => "Category",
-    "zonarevisore" => "Revisor Area",
+    "revisioni" => "Revisory",
     "inserisciAnnuncio" =>"Insert Article",
     "nocategory" => "There are no articles in this category",
     "publishthis" => "Publish an article",
@@ -50,6 +50,7 @@ return [
     "accediora" => "Sign in now!",
     "noannunciricerca" => "There are no articles for this search, try changing the keyword",
     "autore" => "Author",
+    "seguici" => "Follow us",
 
 
 

@@ -1,4 +1,50 @@
-<div class="container-fluid">
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="#">{{ __('ui.chisiamo') }}</a></li>
+                    <li><a href="#">{{__("ui.allAnnouncements")}}</a></li>
+                    <li><a href="{{ route('become.revisor') }}"> {{ __('ui.lavoraconnoi') }} </a></li>
+                    <li><a href="#">© Copyright 2024</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Team</h4>
+                <ul>
+                    <li><a href="#">Sepe</a></li>
+                    <li><a href="#">Ragusa</a></li>
+                    <li><a href="#">Di Salvo</a></li>
+                    <li><a href="#">Vastante</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>{{ __('ui.seguici') }}</h4>
+                <div class="social-links">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- <div class="container-fluid">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 my-5 border-top mx-auto ms-5">
         <div class="col mb-3">
             <h5> Presto.it </h5>
@@ -55,4 +101,4 @@
             <p class="text-body-secondary">&copy; 2024</p>
         </div>
     </footer>
-</div>
+</div> --}}
