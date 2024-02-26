@@ -384,3 +384,11 @@ a:hover {
           margin-right: 350px;
         }
       }
+          .img-preview{
+            height: 50vh;
+            width: 50vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+          }
