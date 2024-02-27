@@ -2,8 +2,6 @@
 
 namespace App\Livewire;
 
-use App\Jobs\GoogleVisionLabelImage;
-use App\Jobs\GoogleVisionSafeSearch;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
