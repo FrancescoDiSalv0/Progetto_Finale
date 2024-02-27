@@ -9,14 +9,14 @@
                         <a href="{{route('announcements.show',compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="card-img-top" alt="foto-card"></a>
                         <div class="card-body">
                             <h5 class="card-title">{{$announcement->title}}</h5>
-                            <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{__("ui.Category")}} {{__("ui." . $announcement->category->name)}} </a>
+                            <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn_color">{{__("ui.Category")}} {{__("ui." . $announcement->category->name)}} </a>
                         </div>
                     </div>
                 </div>
                 @empty
                     <div class="col-12">
                         <p class="h1">{{__("ui.nocategory")}}</p>
-                        <p class="h2">{{__("ui.publishthis")}} <a href="{{route('announcements.create')}}" class="btn btn-success shadow">{{__("ui.newAnnouncement")}}</a></p>
+                        <p class="h2">{{__("ui.publishthis")}} <a href="{{route('announcements.create')}}" class="btn btn_color shadow">{{__("ui.newAnnouncement")}}</a></p>
                     </div>
                 @endforelse
             </div>

@@ -5,7 +5,7 @@
                 <h4>Info</h4>
                 <ul>
                     <li><a href="#">{{ __('ui.chisiamo') }}</a></li>
-                    <li><a href="#">{{__("ui.allAnnouncements")}}</a></li>
+                    <li><a href="{{ route('announcements.index') }}">{{__("ui.allAnnouncements")}}</a></li>
                     <li><a href="{{ route('become.revisor') }}"> {{ __('ui.lavoraconnoi') }} </a></li>
                     <li><a href="#">© Copyright 2024</a></li>
                 </ul>
@@ -22,10 +22,10 @@
             <div class="footer-col">
                 <h4>{{ __('ui.seguici') }}</h4>
                 <div class="social-links">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-whatsapp"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com/aulab/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=393339513967&text=Ciao%21+Vorrei+avere+maggiori+informazioni+sul+corso+Hackademy+per+diventare+web+developer&type=phone_number&app_absent=0" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/aulab_it/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/school/aulab-srl/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div>

@@ -13,6 +13,6 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary"><a href="{{ route('become.revisor') }}">Submit</a></button>
+        <button type="submit" class="btn btn_color"><a href="{{ route('become.revisor') }}">Submit</a></button>
       </form>
 </x-layout>
