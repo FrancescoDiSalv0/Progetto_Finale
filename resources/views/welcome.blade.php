@@ -21,7 +21,7 @@
                                         <p class="card-text">{{ $announcement->description }}</p>
                                         <p class="card-text">{{ $announcement->price }} € </p>
                                         <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                                            class=" my-2 border-top pt-2 border-dark card-link shadow btn">{{ __('ui.Category') }}
+                                            class=" my-2 border-top pt-2 border-dark card-link shadow btn btn_color">{{ __('ui.Category') }}
                                             {{ __('ui.' . $announcement->category->name) }} </a>
                                         <p class="card-footer">{{ $announcement->created_at }}
                                         </p>

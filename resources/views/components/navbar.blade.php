@@ -60,9 +60,9 @@
 
 
         
-            <div class="dropdown">
-                <a class="dropdown-toggle lang-cust" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="h3 globo bi bi-globe-americas"></span></a>
-                <ul class=" dropdown-menu">
+            <div class="dropdown mt-2 ">
+                <a class="dropdown-toggle lang-cust " role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class=" h4 bi bi-globe-americas"></span></a>
+                <ul class=" dropdown-menu ">
                     <div class="dropdown-item text-center">
                         <x-locale lang="it" nation="it"/>
                     </div>

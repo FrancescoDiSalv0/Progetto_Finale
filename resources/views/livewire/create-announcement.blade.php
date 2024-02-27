@@ -9,7 +9,7 @@
 
 
 
-    <form required wire:submit.prevent="store" multiform="multipart/form-data">
+    <form required wire:submit.prevent="store" multiform="multipart/form-data" >
     @csrf
         <div class="mb-3">
           <label for="title"> {{__("ui.titoloannuncio")}}</label>
@@ -67,7 +67,7 @@
           </div>
         </div>
         @endif
-        <button type="submit" class="btn btn-primary"> {{__("ui.crea")}} </button>
+        <button type="submit" class="btn btn_color shadow border-dark my-4"> {{__("ui.crea")}} </button>
       </form>
 
 </div>

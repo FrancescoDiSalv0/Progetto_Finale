@@ -22,7 +22,7 @@
                                 <h4>{{$announcement->price}} € </h4>
                                 </div>
                                 <div class="text-center">
-                                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{ __('ui.' . $announcement->category->name) }} </a>
+                                <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class="my-2 border-top pt-2 border-dark card-link shadow btn">{{ __('ui.' . $announcement->category->name) }} </a>
                                 </div>
                             </div>
                         </div>
