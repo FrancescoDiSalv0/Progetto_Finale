@@ -101,7 +101,7 @@ class CreateAnnouncement extends Component
 
             File::deleteDirectory(storage_path("/app/livewire-tmp"));
         }
-
+        
         // $this->announcement->user()->associate(Auth::user());
         // $this->announcement->save();
 
