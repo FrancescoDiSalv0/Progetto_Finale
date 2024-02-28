@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller {   
@@ -19,7 +20,7 @@ class AnnouncementController extends Controller {
 
     public function indexAnnouncement()
     {
-        $announcements = Announcement::where('is_accepted', true)->paginate(6);
+        $announcements = Announcement::where('is_accepted', true)->orderBy("created_at","desc")->paginate(6);
         return view("announcements.index", compact("announcements"));
     }
 

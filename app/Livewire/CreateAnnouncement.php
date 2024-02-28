@@ -116,7 +116,7 @@ class CreateAnnouncement extends Component
         //     "description" => $this->description,
         //     "price" => $this->price,
         // ]);
-        // Auth::user()->announcements()->save($announcement);
+        Auth::user()->announcements()->save($this->announcement);
 
         session()->flash('message', 'Annuncio creato con successo, sarà pubblicato dopo la revisione ');
         $this->cleanForm();
