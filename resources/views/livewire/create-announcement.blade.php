@@ -9,16 +9,41 @@
 
 
 
-  <form wire:submit.prevent="store" multiform="multipart/form-data" >
-  @csrf
-      <div class="mb-3">
-        <label for="title"> {{__("ui.titoloannuncio")}}</label>
-        <input type="text" wire:model.live="title" class="form-control @error('title') is-invalid @enderror">
-        @error('title')
+    <form wire:submit.prevent="store" multiform="multipart/form-data" >
+    @csrf
+        <div class="mb-3">
+          <label for="title"> {{__("ui.titoloannuncio")}}</label>
+          <input type="text" wire:model.live="title" class="form-control @error('title') is-invalid @enderror">
+          @error('title')
+            {{ $message }}
+            @enderror
+ 
+        </div>
+
+        <div class="mb-3">
+          <label for="description"> {{__("ui.descrizione")}}</label>
+          <textarea type="text" wire:model.live="description" class="form-control @error('description') is-invalid @enderror"></textarea>
+          @error('description')
+            {{ $message }}
+            @enderror
+        </div>
+        
+        <div class="mb-3">
+          <label for="price"> {{__("ui.prezzo")}} </label>
+          <input type="number" step="0.01" wire:model.live="price" class="form-control @error('price') is-invalid @enderror">
+          @error('price')
           {{ $message }}
           @enderror
 
-      </div>
+        <div class="mb-3">
+          <label for="category"> {{__("ui.categoria")}}</label>
+          <select wire:model.defer="category" id="category" class="form-control">
+            <option value="">{{__("ui.selezionacategoria")}} </option>
+            @foreach ($categories as $category)
+            <option value="{{ $category->id }}"> {{ __("ui.$category->name") }} </option>
+            @endforeach
+          </select>
+        </div>
 
       <div class="mb-3">
         <label for="description"> {{__("ui.descrizione")}}</label>

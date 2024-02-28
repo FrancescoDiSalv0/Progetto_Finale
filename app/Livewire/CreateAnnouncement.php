@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
@@ -94,14 +95,18 @@ class CreateAnnouncement extends Component
                 $newImage = $this->announcement->images()->create([
                     'path' => $image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 400, 300));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                RemoveFaces::withChain([
+
+                    new ResizeImage($newImage->path, 400, 300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id),
+
+                ])->dispatch($newImage->id);
             }
 
             File::deleteDirectory(storage_path("/app/livewire-tmp"));
         }
-
+        
         // $this->announcement->user()->associate(Auth::user());
         // $this->announcement->save();
 
@@ -111,7 +116,7 @@ class CreateAnnouncement extends Component
         //     "description" => $this->description,
         //     "price" => $this->price,
         // ]);
-        // Auth::user()->announcements()->save($announcement);
+        Auth::user()->announcements()->save($this->announcement);
 
         session()->flash('message', 'Annuncio creato con successo, sarà pubblicato dopo la revisione ');
         $this->cleanForm();

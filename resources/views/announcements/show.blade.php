@@ -24,11 +24,9 @@
                 </div>
              </div>   
             <div class="col-12 col-md-6 my-3 border d-flex flex-column justify-content-center">
-                @if ($announcement->user)
-                 
-                @else
-                <p> Aghislov_Enjoyer </p> 
-                @endif
+                  {{-- controllo esistenza dell'autore --}}
+                    <p class="card-footer">{{__("ui.pubblicato")}}: {{$announcement->created_at->format('d/m/Y')}} - {{__("ui.autore")}}: {{$announcement->user?->name ?? 'Unknown'}} </p>
+
                 <h3 class="fw-bold">{{$announcement->title}}</h3>
                 <h5> {{$announcement->price}} €</h4>
                     <p> {{$announcement->description}}</p>
@@ -99,7 +97,7 @@
             <p class="card-text">{{__("ui.prezzo")}}: {{ $announcement->price }} € </p>
             <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn-success">{{ __('ui.Category') }}
                 {{ __('ui.' . $announcement->category->name) }} </a>
-            <p class="card-footer">{{__("ui.pubblicato")}}: {{$announcement->created_at->format('d/m/Y')}} - {{__("ui.autore")}}: {{$announcement->user->name ?? 'Unknown'}} </p>
+            
         </div>
     </div>
 </div> --}}
