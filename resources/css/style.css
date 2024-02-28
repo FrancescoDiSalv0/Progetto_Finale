@@ -51,6 +51,18 @@ body {
     background-color: #e2e2e2;
 }
 
+.bordi{
+  margin-top: 10%;
+}
+
+.cardCustom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px; border: 2px solid #fe9221; padding: 10px;
+}
+
+
 /* Inizio Navbar */
 .header {
     position: fixed;
@@ -165,9 +177,10 @@ a:hover {
         background-repeat: none;
       
     }
-      .row_welcome{
+      .row_title{
         transform: translate(0, -10%);
       }
+       
 
     .welcome-title h1{
         position: absolute;
@@ -180,6 +193,7 @@ a:hover {
         color: white;
         text-align: center;
         text-shadow: 0 0 10px #000000;
+        z-index: 8;
     }
 
     .pag_custom{
@@ -200,6 +214,20 @@ a:hover {
     }
 
       /* Classi Specifiche e Generiche */
+
+
+      /* FORM CREA ANNUNCIO */
+    .card_creannuncio{
+      border: 5px solid #fe9221;
+      backdrop-filter: blur(5px);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.452);
+            border-radius: 30px;
+            height: 100%;
+            opacity: 1;
+            background:#ffffff59;
+    }
+
+
     .card-custom{
             backdrop-filter: blur(5px);
             box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.452);
@@ -229,6 +257,14 @@ a:hover {
             background: url(/public/Bodysfondo.jpg);
           }
 
+          .img-preview{
+            height: 50vh;
+            width: 50vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+          }
 
           .wrapp{
             width: 420px;
@@ -304,6 +340,7 @@ a:hover {
             font-weight: 600;
           }
 
+          
 
 
           /* FOOTER */
@@ -334,7 +371,7 @@ a:hover {
           }
           .footer-col{
              width: 25%;
-             padding: 0 15px;
+             padding: 0 20px;
           }
           .footer-col h4{
             font-size: 18px;
@@ -399,14 +436,11 @@ a:hover {
 
           .alert_custom{
             position: absolute;
+            
             margin-top: 7%;
+            z-index: 9;
           }
 
-          .sfondo{
-            background: url(/public/img/1350456.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
 
           /* MEDIA QUERY x francesco */
       /* @media screen and (max-width: 1366px){ 
@@ -455,6 +489,10 @@ a:hover {
         text-align: center;
         text-shadow: 0 0 10px #000000;
     }
+
+      .welcome-title  .subtitle{
+        margin: 500px 0 0 0;
+      }
             .header {
               position: relative;
               top: 0;
@@ -466,7 +504,7 @@ a:hover {
               justify-content: center;
               backdrop-filter: blur(0px);
               border-bottom: 3px solid rgba(31, 31, 31, 0.712);
-              z-index: 9;
+              
           }
 
           .category-cust{

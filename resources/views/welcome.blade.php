@@ -1,11 +1,14 @@
 <x-layout>
     <div class="container-fluid">
-        <div class="row row_welcome">
-            @if (session()->has('access.denied'))
-                <div class=" alert_custom alert alert-danger ">
-                    {{ session('access.denied') }}
-                </div>
-            @endif
+        <div class="row text-center">
+        @if (session()->has('access.denied'))
+            <div class=" alert_custom alert alert-danger ">
+                {{ session('access.denied') }}
+            </div>
+        
+        @endif
+    </div>
+        <div class="row row_title">
             <img class="img-sfondo p-0" src="img/header.jpg" alt="">
             <div class="col-12 welcome-title">
                 <h1>{{ __('ui.Browse carefree on our website') }} <span>Presto!</span></h1>
@@ -21,7 +24,7 @@
                                         <p class="card-text">{{ $announcement->description }}</p>
                                         <p class="card-text">{{ $announcement->price }} € </p>
                                         <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                                            class=" my-2 border-top pt-2 border-dark card-link shadow btn btn_color">{{ __('ui.Category') }}
+                                            class=" my-2 border-top pt-2 border-dark card-link shadow btn btn_color">
                                             {{ __('ui.' . $announcement->category->name) }} </a>
                                         <p class="card-footer">{{ $announcement->created_at }}
                                         </p>
@@ -33,4 +36,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </x-layout>

@@ -1,5 +1,5 @@
 <x-layout>
-<div class="container margine_cust ">
+<div class="container margine_cust  ">
     <div class="row">
         <div class="col-12 d-flex justify-content-center align-items-center">
             <h1 class="subtitle"> {{__("ui.allAnnouncements")}} </h1>
