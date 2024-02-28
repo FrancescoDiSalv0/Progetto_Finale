@@ -1,6 +1,6 @@
 <x-layout>
-    <div id="bgcustom">
-    <div class="login_register">
+    <div>
+    <div class="login_register margine_cust">
             <form class="wrapp" method="POST" action={{route("register")}} >
                 @csrf
                 <div>

@@ -5,11 +5,11 @@
             <div class="row"> 
                 @forelse ($category->announcements as $announcement)
                 <div class="col-12 col-md-4 my-4">
-                    <div class="card shadow justify-content-center" style="width: 18rem;">
+                    <div class="card-custom"
                         <a href="{{route('announcements.show',compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="card-img-top" alt="foto-card"></a>
                         <div class="card-body">
-                            <h5 class="card-title">{{$announcement->title}}</h5>
-                            <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" my-2 border-top pt-2 border-dark card-link shadow btn btn_color">{{__("ui.Category")}} {{__("ui." . $announcement->category->name)}} </a>
+                            <h5 class="card-title m-2">{{$announcement->title}}</h5>
+                            <a href="{{route('categoryShow',['category' =>$announcement->category])}}" class=" btn-category border-top pt-2 border-dark shadow btn btn_color">{{__("ui.Category")}} {{__("ui." . $announcement->category->name)}} </a>
                         </div>
                     </div>
                 </div>
@@ -19,6 +19,7 @@
                         <p class="h2">{{__("ui.publishthis")}} <a href="{{route('announcements.create')}}" class="btn btn_color shadow">{{__("ui.newAnnouncement")}}</a></p>
                     </div>
                 @endforelse
+                {{-- {{ $announcements->links() }} --}}
             </div>
         </div>
     </div>

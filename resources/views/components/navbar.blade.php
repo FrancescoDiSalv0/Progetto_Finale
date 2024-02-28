@@ -1,5 +1,5 @@
 <header class="header">
-    <ul class="nav_custom">
+    <ul class="nav_custom ">
         <a href="{{ route('welcome') }}">
     <img class="logo" src="/prestologo.png" alt="logo"></a>
         
@@ -48,8 +48,6 @@
             </li>
         @endguest
        
-
-        
         <li class="nav-item searchbar-cust login_register">
             <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
                 <input name="searched" class="form-control me-2" type="search" placeholder= "Search" aria-label="Search">
@@ -57,9 +55,6 @@
             </form>
         </li>
        
-
-
-        
             <div class="dropdown mt-2 ">
                 <a class="dropdown-toggle lang-cust " role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class=" h4 bi bi-globe-americas"></span></a>
                 <ul class=" dropdown-menu ">
@@ -71,8 +66,6 @@
                     </div>
                 </ul>
             </div>
-
-
     </ul>
 
 </header>

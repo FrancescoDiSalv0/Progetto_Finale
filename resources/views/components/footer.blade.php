@@ -1,10 +1,10 @@
 <footer class="footer">
-    <div class="container">
-        <div class="row">
+    <div class="container cont_foot">
+        <div class="row row_foot">
             <div class="footer-col">
                 <h4>Info</h4>
                 <ul>
-                    <li><a href="#">{{ __('ui.chisiamo') }}</a></li>
+                    <li><a href="{{ route('welcome') }}">Home</a></li>
                     <li><a href="{{ route('announcements.index') }}">{{__("ui.allAnnouncements")}}</a></li>
                     <li><a href="{{ route('become.revisor') }}"> {{ __('ui.lavoraconnoi') }} </a></li>
                     <li><a href="#">© Copyright 2024</a></li>

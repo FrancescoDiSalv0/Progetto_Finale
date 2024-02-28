@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row row_welcome">
             @if (session()->has('access.denied'))
                 <div class=" alert_custom alert alert-danger ">
                     {{ session('access.denied') }}
