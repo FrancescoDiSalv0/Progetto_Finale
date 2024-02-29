@@ -2,7 +2,7 @@
     <div class="container margine_cust">
         
         <div class="row">
-            <div class="col-12 col-md-6 my-3">
+            <div class="col-12 col-md-6 my-3 ">
                 <div style="--swiper-navigation-color: #fffff; --swiper-pagination-color: #fffff" class="swiper mySwiper">
                     <div class="parallax-bg" data-swiper-parallax="-23%"></div>
                     <div class="swiper-wrapper">
@@ -23,17 +23,17 @@
                     <div class="swiper-pagination"></div>
                 </div>
              </div>   
-            <div class="col-12 col-md-6 my-3 border d-flex flex-column justify-content-center">
+            <div class="col-12 col-md-6 my-3 border d-flex flex-column justify-content-center bg-white">
                   {{-- controllo esistenza dell'autore --}}
-                    <p class="card-footer">{{__("ui.pubblicato")}}: {{$announcement->created_at->format('d/m/Y')}} - {{__("ui.autore")}}: {{$announcement->user?->name ?? 'Unknown'}} </p>
+                    <p class="card-footer my-3"> {{__("ui.autore")}}: {{$announcement->user?->name ?? 'Unknown'}} </p>
 
                 <h3 class="fw-bold">{{$announcement->title}}</h3>
                 <h5> {{$announcement->price}} €</h4>
                     <p> {{$announcement->description}}</p>
                     <p> {{$announcement->created_at->format('d/m/y')}}</p>
                     <div>
-                        <a class="btn btn_color shadow border-dark my-5" href="{{ route('announcements.index') }}">{{__('ui.allAnnouncements')}}</a>
-                        <a class="btn btn_color shadow border-dark my-5" href="{{route('categoryShow',['category' =>$announcement->category])}}"> {{__('ui.' . $announcement->category->name)}}</a>
+                        <a class="btn btn_color shadow border-dark my-3" href="{{ route('announcements.index') }}">{{__('ui.allAnnouncements')}}</a>
+                        <a class="btn btn_color shadow border-dark my-3" href="{{route('categoryShow',['category' =>$announcement->category])}}"> {{__('ui.' . $announcement->category->name)}}</a>
                     </div>
                     
                 </div>

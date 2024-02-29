@@ -1,5 +1,5 @@
 <x-layout>
- <div class="container margine_cust">
+ <div class="container create_custom margine_cust">
   <div class="row">
     <div class="col-12">
       <livewire:create-announcement/>

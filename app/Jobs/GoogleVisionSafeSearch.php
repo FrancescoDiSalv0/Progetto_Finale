@@ -17,17 +17,13 @@ class GoogleVisionSafeSearch implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private $announcement_image_id;
-    /**
-     * Create a new job instance.
-     */
+
     public function __construct($announcement_image_id)
     {
         $this->announcement_image_id = $announcement_image_id;
     }
 
-    /**
-     * Execute the job.
-     */
+ 
     public function handle(): void
     {
         $i = Image::find($this->announcement_image_id);
@@ -51,7 +47,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $violence = $safe->getViolence();
         $racy = $safe->getRacy();
 
-        // echo json_encode
+      
 
         $likelihoodName = [
             'text-secondary fas fa-circle', 'text-success fas fa-circle', 'text-warning fas fa-circle', 'text-warning fas fa-circle', 'text-danger fas fa-circle',

@@ -1,18 +1,18 @@
 <x-layout>
-<div class="container margine_cust">
+<div class="container margine_cust  ">
     <div class="row">
-        <div class="col-12">
-            <h1> {{__("ui.allAnnouncements")}} </h1>
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <h1 class="subtitle"> {{__("ui.allAnnouncements")}} </h1>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="row">
+            <div class="row ">
                 @forelse ($announcements as $announcement)
                     <div class="col-12 col-md-6 col-lg-4 my-4">
-                        <div class="card shadow card-custom">
+                        <div class="card card-custom">
                             <a href="{{route('announcements.show',compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/400/300'}}" class="card-img-top" alt="foto-card"></a>
                             <div class="card-body">
                                 <div class="my-1">

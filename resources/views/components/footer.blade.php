@@ -1,10 +1,10 @@
 <footer class="footer">
-    <div class="container">
-        <div class="row">
+    <div class="container cont_foot">
+        <div class="row row_foot justify-content-between">
             <div class="footer-col">
                 <h4>Info</h4>
                 <ul>
-                    <li><a href="#">{{ __('ui.chisiamo') }}</a></li>
+                    <li><a href="{{ route('welcome') }}">Home</a></li>
                     <li><a href="{{ route('announcements.index') }}">{{__("ui.allAnnouncements")}}</a></li>
                     <li><a href="{{ route('become.revisor') }}"> {{ __('ui.lavoraconnoi') }} </a></li>
                     <li><a href="#">© Copyright 2024</a></li>
@@ -13,10 +13,10 @@
             <div class="footer-col">
                 <h4>Team</h4>
                 <ul>
-                    <li><a href="#">Sepe</a></li>
-                    <li><a href="#">Ragusa</a></li>
-                    <li><a href="#">Di Salvo</a></li>
-                    <li><a href="#">Vastante</a></li>
+                    <li><a href="https://www.linkedin.com/in/vito-sepewebdeveloper/" target="_blank">Sepe</a></li>
+                    <li><a href="https://www.linkedin.com/in/fabio-ragusa-b5bab7255/" target="_blank">Ragusa</a></li>
+                    <li><a href="https://www.linkedin.com/in/francesco-di-salvodev/" target="_blank">Di Salvo</a></li>
+                    <li><a href="https://www.linkedin.com/in/valerio-vastante-dev/" target="_blank">Vastante</a></li>
                 </ul>
             </div>
             <div class="footer-col">
