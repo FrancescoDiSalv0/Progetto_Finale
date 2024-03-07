@@ -1,7 +1,7 @@
 :root{
     --color-P: #f1dec5c0;
     --color-S: #252323;
-    --color-A: #cca94a;
+    --color-A: #fe9221;
 }
 
 .bg-P{
@@ -104,11 +104,13 @@ a:hover {
 .category-cust{
     list-style-type: none;
     color: #000000;
-    /* font-size: 18px; */
-    /* margin-left: 50px; */
+    font-size: 18px;
     margin-top: 10px;
     text-decoration: none;
-    transition: .3s;
+}
+
+.category-cust:hover{
+  color: #fe9221;
 }
 
 .nav_custom{
@@ -238,6 +240,15 @@ a:hover {
           }
 
           .btn_color{
+            color: #fe9221;
+          }
+
+          .btn_new{
+            background-color: #fe9221;
+            color: #ffffff;
+          }
+
+          .btn_new:hover{
             color: #fe9221;
           }
 
@@ -599,3 +610,4 @@ a:hover {
               width: 100%;
           }
           } */
+          

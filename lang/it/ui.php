@@ -50,11 +50,6 @@ return [
     "accediora" => "Accedi ora!",
     "noannunciricerca" => "Non ci sono annunci per questa ricerca. Prova a cambiare parola",
     "autore" => "Autore",
-    "seguici" => "Seguici su",
-
-
-
-
-
+    "seguici" => "Seguici",
 
 ];

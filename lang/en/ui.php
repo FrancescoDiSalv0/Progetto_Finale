@@ -52,16 +52,4 @@ return [
     "autore" => "Author",
     "seguici" => "Follow us",
 
-
-
-
-
-
-
-
-
-
-
-
-
 ];

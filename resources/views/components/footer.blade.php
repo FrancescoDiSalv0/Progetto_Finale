@@ -7,15 +7,14 @@
                     <li><a href="{{ route('welcome') }}">Home</a></li>
                     <li><a href="{{ route('announcements.index') }}">{{__("ui.allAnnouncements")}}</a></li>
                     <li><a href="{{ route('become.revisor') }}"> {{ __('ui.lavoraconnoi') }} </a></li>
-                    <li><a href="#">© Copyright 2024</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Team</h4>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/vito-sepewebdeveloper/" target="_blank">Sepe</a></li>
-                    <li><a href="https://www.linkedin.com/in/fabio-ragusa-b5bab7255/" target="_blank">Ragusa</a></li>
                     <li><a href="https://www.linkedin.com/in/francesco-di-salvodev/" target="_blank">Di Salvo</a></li>
+                    <li><a href="https://www.linkedin.com/in/fabio-ragusa-b5bab7255/" target="_blank">Ragusa</a></li>
+                    <li><a href="https://www.linkedin.com/in/vito-sepewebdeveloper/" target="_blank">Sepe</a></li>
                     <li><a href="https://www.linkedin.com/in/valerio-vastante-dev/" target="_blank">Vastante</a></li>
                 </ul>
             </div>
@@ -27,18 +26,13 @@
                     <a href="https://www.instagram.com/aulab_it/" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.linkedin.com/school/aulab-srl/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
+                <div class="footer-col">
+                    <li><a class="text-secondary">&copy; 2024</a></li>
+                </div>
             </div>
         </div>
     </div>
 </footer>
-
-
-
-
-
-
-
-
 
 
 

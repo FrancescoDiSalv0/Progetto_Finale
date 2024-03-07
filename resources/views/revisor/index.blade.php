@@ -30,7 +30,7 @@
                     <div class="card-body p-0">
                         <h5 class="card-title mt-5 mb-5 subtitle font-title">{{$announcement_to_check->title}}</h5>
                         <p class="card-text"><span class="fs-5">{{__('ui.descrizione')}}:</span> {{$announcement_to_check->description}}</p>
-                        <p class="card-text"><span class="fs-5">{{__('ui.prezzo')}}:</span> {{$announcement_to_check->price}}€</p>
+                        <p class="card-text"><span class="fs-5">{{__('ui.prezzo')}}:</span> {{$announcement_to_check->price}} €</p>
                         <p class="card-text"><span class="fs-5">{{__('ui.categoria')}}:</span> {{$announcement_to_check->category->name}}</p>
                         <p class="card-text"><span class="fs-5">{{__('ui.pubblicato')}}:</span> {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
                         <h5 class="font-title subtitle mt-5">Tags</h5>
@@ -59,6 +59,7 @@
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-danger shadow border-dark ms-5">{{ __('ui.rifiuta') }} </button>
+                                </form>
                                 </div>
                                 <div class="col-6 text-start">
                                     <form action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
